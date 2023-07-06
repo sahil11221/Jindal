@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Madanlal Agarwal Family Tree</title>
+    <style>
+        body {
+            background-color: #eee9ea;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+        background-image: url("sahil.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 30px;
+        }
+
+        .family-tree {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .family-tree .person {
+            text-align: center;
+            padding: 10px;
+            position: relative;
+        }
+
+        .family-tree .person img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .family-tree .person .name {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .subset {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .subset::after {
+            content: "";
+            position: absolute;
+            top: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid #333;
+        }
+
+        .person:first-child .name::after {
+            content: "\00A0↓";
+            margin-left: 5px;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .family-tree .person {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .family-tree .person:hover {
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+      <script>
+        function playBackgroundMusic() {
+            var audio = new Audio("background-music.mp3");
+            audio.loop = true;
+            audio.play();
+        }
+    </script>
+</head>
+<body onload="playBackgroundMusic()">
+    <div class="container">
+        <h1>Madanlal Agarwal Family Tree</h1>
+        <div class="family-tree">
+            <div class="person">
+                <img src="Late Madanlal Agarwal.png" alt="Madanlal Agarwal">
+                <div class="name">Madanlal Agarwal</div>
+                <div class="subset">
+                    <div class="person">
+                        <img src="Ashok Agarwal.jpg" alt="Ashok Agarwal">
+                        <div class="name">Ashok Agarwal</div>
+                    </div>
+                    <div class="person">
+                        <img src="Pawan Agarwal.jpg" alt="Pawan Agarwal">
+                        <div class="name">Pawan Agarwal</div>
+                    </div>
+                    <div class="person">
+                        <img src="Anil Agarwal.jpg" alt="Anil Agarwal">
+                        <div class="name">Anil Agarwal</div>
+                    </div>
+                </div>
+                <div class="subset">
+                    <div class="person">
+                        <img src="Dhrub Agarwal.jpg" alt="Dhrub Agarwal">
+                        <div class="name">Dhrub Agarwal</div>
+                    </div>
+                    <div class="person">
+                        <img src="Garv Agarwal.jpg" alt=" Agarwal">
+                        <div class="name">Garv Agarwal</div>
+                    </div>
+                    <div class="person">
+                        <img src="Sahil Agarwal.jpg" alt="Sahil Agarwal">
+                        <div class="name">Sahil Agarwal</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
